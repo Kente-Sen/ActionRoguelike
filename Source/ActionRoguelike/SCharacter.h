@@ -25,6 +25,8 @@ protected:
 	void MoveForward(float value);
 	void MoveRight(float value);
 
+	void PrimaryAttack();
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -38,4 +40,6 @@ protected:
 	UPROPERTY(VisibleAnywhere)
 	UCameraComponent *camera_comp;
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> ProjectileClass;
 };
